@@ -35,10 +35,12 @@ def handle_result(args: List[str], answer: str, target_window_id: int, boss: kit
 
     target = None
     for window_id in reversed(tab.windows.active_window_history):
-        cand = candidates.get(window_id)
-        if cand:
-            target = cand
-            break
+        group = tab.windows.group_for_window(window_id)
+        if group:
+            cand = candidates.get(group.id)
+            if cand:
+                target = cand
+                break
     target = target or next(iter(candidates.values()), None)
 
     if not target:
