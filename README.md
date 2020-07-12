@@ -1,3 +1,8 @@
+# OBSOLETE
+
+Kitty already handles this case when my PR was merged. This project is no longer.
+
+
 # improved-neighbor-kitten
 Kitten for improving the usage of Kitty-terminal splits layout. See https://github.com/kovidgoyal/kitty/
 
